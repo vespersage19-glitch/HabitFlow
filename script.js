@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const checkboxes = document.querySelectorAll('.habit-cb');
     const completionText = document.getElementById('completion-text');
-    const streakVal = document.getElementById('streak-val');
     const progressWrapper = document.querySelector('.circle-progress-wrapper');
     const ctx = document.getElementById('weeklyChart').getContext('2d');
 
-    // 1. Core Logic: Percentage Calculation
+    // 1. Percentage Calculation Logic
     function updateProgress() {
         const total = checkboxes.length;
         const checked = document.querySelectorAll('.habit-cb:checked').length;
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             datasets: [{
                 label: 'Completion %',
-                data:, // Sample tracker metrics
+                data:, 
                 backgroundColor: '#10b981',
                 borderRadius: 6,
                 borderSkipped: false,
@@ -52,3 +51,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial state trigger
     updateProgress();
 });
+
