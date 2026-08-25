@@ -1,0 +1,201 @@
+/* Premium Dark & Cyber Green Theme Setup */
+:root {
+    --bg-main: #0b0f19;       /* Deep Charcoal Navy */
+    --bg-card: #151d30;       /* Steady Dark Slate Card */
+    --accent: #10b981;        /* Premium Cyber Emerald Green */
+    --text-primary: #f3f4f6;  /* Crisp White */
+    --text-muted: #9ca3af;    /* Focused Grey */
+    --border-color: #24324f;  /* Subtle divider color */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Master Layout - Phone standard width container */
+.dashboard-container {
+    width: 100%;
+    max-width: 500px; /* Perfect fit for all android mobile screens */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Clean Header/Sidebar for Mobile */
+.sidebar {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.streak-box {
+    margin-top: 14px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.streak-value {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Stats Layout - No Tangling, clean stack grid */
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    align-self: flex-start;
+}
+
+/* Circular Progress Center Ring */
+.circle-progress-wrapper {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, var(--bg-card) 79%, transparent 80% 100%),
+                conic-gradient(var(--accent) 0%, #1e293b 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.percentage-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.chart-container {
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+
+/* Cards UI Setup */
+.card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+/* Easy-to-Tap Checklist Items */
+.habit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.habit-row {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Big custom checkbox for simple mobile taps */
+.habit-cb {
+    width: 22px;
+    height: 22px;
+    accent-color: var(--accent);
+    cursor: pointer;
+    margin-right: 14px;
+}
+
+.habit-row label {
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Premium Textarea & Button Setup */
+textarea {
+    width: 100%;
+    height: 90px;
+    background: #0b0f19;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    color: var(--text-primary);
+    font-family: inherit;
+    resize: none;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+textarea:focus {
+    border-color: var(--accent);
+}
+
+button {
+    width: 100%;
+    background: var(--accent);
+    color: #0b0f19;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:active {
+    opacity: 0.9;
+}
