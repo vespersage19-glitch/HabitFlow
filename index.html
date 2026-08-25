@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>HabitFlow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitFlow - JEE Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Charts banane ke liye Chart.js library -->
+    <script src="https://jsdelivr.net"></script>
 </head>
 <body>
+    <div class="dashboard-container">
+        <!-- Top App Bar / Header -->
+        <aside class="sidebar">
+            <div class="logo">HabitFlow 🔥</div>
+            <p class="tagline">JEE Discipline Mode</p>
+            <div class="streak-box">
+                <span class="streak-title">Current Streak</span>
+                <span class="streak-value" id="streak-val">0 Days</span>
+            </div>
+        </aside>
 
-  <h1>HabitFlow</h1>
-  <p>Build better habits, one day at a time.</p>
+        <!-- Main Dashboard Layout -->
+        <main class="main-content">
+            <!-- Stats Row -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Today's Completion</h3>
+                    <!-- Circular Percentage Ring Display -->
+                    <div class="circle-progress-wrapper">
+                        <div class="percentage-text" id="completion-text">0%</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Weekly Consistency</h3>
+                    <div class="chart-container">
+                        <canvas id="weeklyChart"></canvas>
+                    </div>
+                </div>
+            </section>
 
+            <!-- Checklist Section -->
+            <section class="card tasks-card">
+                <h2>Daily Mission Checklist</h2>
+                <div class="habit-list">
+                    <div class="habit-row">
+                        <input type="checkbox" id="h1" class="habit-cb">
+                        <label for="h1">📚 Solve Daily Question Target</label>
+                    </div>
+                    <div class="habit-row">
+                        <input type="checkbox" id="h2" class="habit-cb">
+                        <label for="h2">🧠 Revise Yesterday's Concepts</label>
+                    </div>
+                    <div class="habit-row">
+                        <input type="checkbox" id="h3" class="habit-cb">
+                        <label for="h3">⏱️ Complete Focused Study Slots</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reflection Box Section -->
+            <section class="card reflection-card">
+                <h2>Daily Notes & Realisation 📝</h2>
+                <textarea id="notes-area" placeholder="Write down any realization, mistakes, or wins today..."></textarea>
+                <button id="save-progress-btn">Lock In Progress</button>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript code logic connection -->
+    <script src="script.js"></script>
 </body>
 </html>
